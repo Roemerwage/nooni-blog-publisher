@@ -1,0 +1,19 @@
+# Secrets — nooit committen
+.env.local
+.env*.local
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Afbeeldingen (groot, niet nodig voor automatisering)
+public/images/
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/
+*.swp

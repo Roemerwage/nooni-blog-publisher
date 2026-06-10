@@ -1,0 +1,140 @@
+{
+  "clusters": [
+    {
+      "name": "Lion's Mane",
+      "color": "#C4A55A",
+      "keywords": [
+        { "title": "Lion's Mane werking: wat doet het voor je hersenen?", "intent": "informational", "priority": "high" },
+        { "title": "Lion's Mane capsules kopen: waar let je op?", "intent": "commercial", "priority": "high" },
+        { "title": "Lion's Mane en focus: werkt het echt?", "intent": "informational", "priority": "high" },
+        { "title": "Lion's Mane geheugen verbeteren: wat zegt het onderzoek?", "intent": "informational", "priority": "high" },
+        { "title": "Wat is Lion's Mane? De complete gids", "intent": "informational", "priority": "high" },
+        { "title": "Lion's Mane voordelen: alles wat je moet weten", "intent": "informational", "priority": "high" },
+        { "title": "Lion's Mane dosering: hoeveel mg per dag?", "intent": "informational", "priority": "medium" },
+        { "title": "Lion's Mane ervaringen: dit zeggen gebruikers", "intent": "informational", "priority": "medium" },
+        { "title": "Hericium erinaceus: de wetenschap achter de pruikzwam", "intent": "informational", "priority": "medium" },
+        { "title": "Lion's Mane en NGF: hoe stimuleert het zenuwgroei?", "intent": "informational", "priority": "medium" },
+        { "title": "Lion's Mane bij concentratiedip: wanneer helpt het?", "intent": "informational", "priority": "medium" },
+        { "title": "Lion's Mane in koffie: combinatie voor betere focus?", "intent": "informational", "priority": "high" }
+      ]
+    },
+    {
+      "name": "Reishi",
+      "color": "#8B4B3C",
+      "keywords": [
+        { "title": "Reishi werking: wat doet deze paddenstoel voor je?", "intent": "informational", "priority": "high" },
+        { "title": "Reishi voor betere slaap: werkt het?", "intent": "informational", "priority": "high" },
+        { "title": "Reishi stress verminderen: de adaptogene werking uitgelegd", "intent": "informational", "priority": "high" },
+        { "title": "Wat is Reishi? Complete gids voor beginners", "intent": "informational", "priority": "high" },
+        { "title": "Reishi en cortisol: hoe werkt het op je stresshormoon?", "intent": "informational", "priority": "medium" },
+        { "title": "Reishi immuunsysteem: hoe versterkt het je weerstand?", "intent": "informational", "priority": "medium" },
+        { "title": "Reishi voordelen: 6 wetenschappelijke inzichten", "intent": "informational", "priority": "medium" },
+        { "title": "Reishi ervaringen: is het de hype waard?", "intent": "informational", "priority": "medium" },
+        { "title": "Reishi capsules kopen: waar let je op?", "intent": "commercial", "priority": "medium" }
+      ]
+    },
+    {
+      "name": "Chaga",
+      "color": "#5C4033",
+      "keywords": [
+        { "title": "Chaga werking: de krachtigste antioxidant-paddenstoel?", "intent": "informational", "priority": "high" },
+        { "title": "Wat is Chaga? De paddenstoel die groeit op berkenbomen", "intent": "informational", "priority": "high" },
+        { "title": "Chaga en het immuunsysteem: wat zegt het onderzoek?", "intent": "informational", "priority": "high" },
+        { "title": "Chaga antioxidanten: waarom heeft het de hoogste ORAC-waarde?", "intent": "informational", "priority": "medium" },
+        { "title": "Chaga voordelen: 5 redenen om het te proberen", "intent": "informational", "priority": "medium" },
+        { "title": "Chaga ervaringen: wat zeggen gebruikers?", "intent": "informational", "priority": "medium" },
+        { "title": "Chaga capsules vs poeder: wat werkt beter?", "intent": "informational", "priority": "medium" }
+      ]
+    },
+    {
+      "name": "Cordyceps",
+      "color": "#688662",
+      "keywords": [
+        { "title": "Cordyceps werking: meer energie en uithoudingsvermogen?", "intent": "informational", "priority": "high" },
+        { "title": "Cordyceps en sport: helpt het echt bij prestaties?", "intent": "informational", "priority": "high" },
+        { "title": "Wat is Cordyceps? De energiepaddenstoel uitgelegd", "intent": "informational", "priority": "high" },
+        { "title": "Cordyceps ATP: hoe boost het je celenergie?", "intent": "informational", "priority": "medium" },
+        { "title": "Cordyceps voor hardlopers: wat zegt het onderzoek?", "intent": "informational", "priority": "medium" },
+        { "title": "Cordyceps voordelen: van energie tot uithoudingsvermogen", "intent": "informational", "priority": "medium" },
+        { "title": "Cordyceps dosering: wanneer en hoeveel neem je?", "intent": "informational", "priority": "medium" }
+      ]
+    },
+    {
+      "name": "Mushroom Coffee",
+      "color": "#274472",
+      "keywords": [
+        { "title": "Mushroom coffee: wat is het en waarom is het beter dan gewone koffie?", "intent": "informational", "priority": "high" },
+        { "title": "Mushroom coffee voordelen: wat doet paddenstoel koffie voor je?", "intent": "informational", "priority": "high" },
+        { "title": "Mushroom coffee vs koffie: de eerlijke vergelijking", "intent": "informational", "priority": "high" },
+        { "title": "Mushroom coffee cafeïne: hoeveel zit er in?", "intent": "informational", "priority": "high" },
+        { "title": "Paddenstoel koffie: hoe maak je het en wat smaakt het?", "intent": "informational", "priority": "high" },
+        { "title": "Mushroom coffee kopen: waar let je op?", "intent": "commercial", "priority": "high" },
+        { "title": "Mushroom coffee ervaringen: dit zijn de resultaten na 30 dagen", "intent": "informational", "priority": "high" },
+        { "title": "Koffie vervangen door mushroom coffee: mijn ervaring", "intent": "informational", "priority": "medium" },
+        { "title": "Mushroom coffee bijwerkingen: zijn er risico's?", "intent": "informational", "priority": "medium" },
+        { "title": "Mushroom coffee recept: zo maak je de perfecte kop thuis", "intent": "informational", "priority": "medium" }
+      ]
+    },
+    {
+      "name": "Mushroom Matcha & Cacao",
+      "color": "#688662",
+      "keywords": [
+        { "title": "Mushroom matcha: de perfecte combinatie voor focus?", "intent": "informational", "priority": "high" },
+        { "title": "Mushroom matcha vs mushroom coffee: welke kies je?", "intent": "informational", "priority": "high" },
+        { "title": "Mushroom cacao: gezonde chocoladedrank of hype?", "intent": "informational", "priority": "high" },
+        { "title": "Lion's Mane matcha: combinatie voor maximale focus", "intent": "informational", "priority": "medium" },
+        { "title": "Mushroom matcha voordelen: L-theanine plus paddenstoelen", "intent": "informational", "priority": "medium" },
+        { "title": "Mushroom cacao recept: zo maak je een gezonde warme chocolademelk", "intent": "informational", "priority": "medium" },
+        { "title": "Reishi cacao: nachtdrankje voor betere slaap?", "intent": "informational", "priority": "medium" }
+      ]
+    },
+    {
+      "name": "Functionele Paddenstoelen (algemeen)",
+      "color": "#274472",
+      "keywords": [
+        { "title": "Functionele paddenstoelen: complete gids voor beginners", "intent": "informational", "priority": "high" },
+        { "title": "Medicinale paddenstoelen: welke zijn er en wat doen ze?", "intent": "informational", "priority": "high" },
+        { "title": "Adaptogene paddenstoelen: hoe helpen ze bij stress?", "intent": "informational", "priority": "high" },
+        { "title": "Dual extraction: waarom is dit de beste methode voor paddenstoelen?", "intent": "informational", "priority": "high" },
+        { "title": "Vruchtlichamen vs mycelium: welk supplement is beter?", "intent": "informational", "priority": "high" },
+        { "title": "Beta-glucanen in paddenstoelen: wat zijn het en waarom zijn ze belangrijk?", "intent": "informational", "priority": "medium" },
+        { "title": "Functionele paddenstoelen kopen: waar let je op?", "intent": "commercial", "priority": "high" },
+        { "title": "Beste functionele paddenstoelen van 2026: onze top 5", "intent": "commercial", "priority": "medium" },
+        { "title": "Lion's Mane, Reishi, Chaga of Cordyceps: welke kies je?", "intent": "informational", "priority": "high" },
+        { "title": "Paddenstoelen supplement of echt eten: wat werkt beter?", "intent": "informational", "priority": "medium" },
+        { "title": "Functionele paddenstoelen wetenschappelijk onderbouwd: wat zegt PubMed?", "intent": "informational", "priority": "medium" }
+      ]
+    },
+    {
+      "name": "Wellness & Lifestyle",
+      "color": "#C4A55A",
+      "keywords": [
+        { "title": "Focus verbeteren zonder cafeïne: 5 natuurlijke methoden", "intent": "informational", "priority": "medium" },
+        { "title": "Energie supplement zonder bijwerkingen: wat werkt?", "intent": "informational", "priority": "medium" },
+        { "title": "Slaap verbeteren met supplementen: de complete gids", "intent": "informational", "priority": "medium" },
+        { "title": "Stress verminderen met adaptogenen: zo werkt het", "intent": "informational", "priority": "medium" },
+        { "title": "Nootropics Nederland: welke zijn legaal en effectief?", "intent": "informational", "priority": "medium" },
+        { "title": "Biohacking voor beginners: supplementen die werken", "intent": "informational", "priority": "low" },
+        { "title": "Ochtendroutine supplementen: wat neem je wanneer?", "intent": "informational", "priority": "medium" },
+        { "title": "Immuunsysteem versterken: de beste supplementen van 2026", "intent": "informational", "priority": "medium" },
+        { "title": "Gezond ouder worden met functionele paddenstoelen", "intent": "informational", "priority": "low" }
+      ]
+    }
+  ],
+  "competitors": [
+    { "name": "Mushrooms4Life", "url": "mushroomsforlife.nl", "strength": "biologisch gecertificeerd, breed assortiment" },
+    { "name": "Foodsporen", "url": "foodsporen.nl", "strength": "NL merk, kwaliteitsextracten, B2B" },
+    { "name": "Pure Mushrooms", "url": "puremushrooms.nl", "strength": "biologisch, sterke contentstrategie" },
+    { "name": "Puur Nordic", "url": "puurnordic.com", "strength": "premium positionering, goed design" },
+    { "name": "Naturecan NL", "url": "naturecan.nl/blogs", "strength": "sterke SEO blog, internationaal merk" },
+    { "name": "Spiruella", "url": "spiruella.nl", "strength": "uitgebreide blog, veel educatieve content" },
+    { "name": "Four Sigmatic", "url": "foursigimatic.com", "strength": "marktleider mushroom coffee, internationale naamsbekendheid" }
+  ],
+  "gaps": [
+    "Weinig NL-content over dual extraction uitgelegd voor consumenten",
+    "Nauwelijks vergelijkingsartikelen mushroom matcha vs coffee",
+    "Weinig ritueel/gebruik-content (ochtendroutine, recepten)",
+    "Cordyceps voor sport amper gedekt in NL",
+    "Tremella & huidverzorging compleet ongedekt in NL markt"
+  ]
+}

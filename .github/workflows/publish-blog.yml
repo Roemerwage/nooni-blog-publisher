@@ -1,0 +1,59 @@
+name: Nooni Blog Publisher
+
+on:
+  schedule:
+    # Ma/wo/vr 09:00 Amsterdam tijd (UTC+2 zomer = 07:00 UTC)
+    - cron: '0 7 * * 1,3,5'
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Handmatig een specifiek topic publiceren (optioneel)'
+        required: false
+      send_digest:
+        description: 'Klaviyo digest ook versturen? (true/false)'
+        required: false
+        default: 'false'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node.js instellen
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Dependencies installeren
+        run: npm ci
+
+      - name: Blog publiceren
+        run: |
+          if [ -n "${{ github.event.inputs.topic }}" ]; then
+            echo "Handmatig topic: ${{ github.event.inputs.topic }}"
+            node scripts/publish.mjs "${{ github.event.inputs.topic }}"
+          else
+            node scripts/publish.mjs --today
+          fi
+        env:
+          ANTHROPIC_API_KEY:    ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY:       ${{ secrets.OPENAI_API_KEY }}
+          SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
+
+      - name: Klaviyo digest versturen (vrijdag automatisch + handmatig)
+        run: |
+          DAY=$(date +%u)  # 1=ma, 5=vr
+          SEND_MANUAL="${{ github.event.inputs.send_digest }}"
+          if [ "$DAY" = "5" ] || [ "$SEND_MANUAL" = "true" ]; then
+            echo "Digest versturen..."
+            node scripts/send-klaviyo-digest.mjs
+          else
+            echo "Geen vrijdag — digest overgeslagen."
+          fi
+        env:
+          KLAVIYO_API_KEY: ${{ secrets.KLAVIYO_API_KEY }}

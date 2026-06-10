@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:getnooni.com)",
+      "mcp__claude_ai_Notion__notion-search",
+      "mcp__claude_ai_Notion__notion-fetch",
+      "WebSearch",
+      "WebFetch(domain:mcpmarket.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Skill(ui-ux-pro-max)",
+      "Skill(ui-ux-pro-max:*)",
+      "mcp__claude_ai_Canva__list-brand-kits",
+      "mcp__claude_ai_Canva__get-design",
+      "mcp__claude_ai_Canva__get-design-pages",
+      "mcp__claude_ai_Canva__get-design-content",
+      "WebFetch(domain:document-export.canva.com)",
+      "mcp__claude_ai_Canva__start-editing-transaction",
+      "mcp__claude_ai_Canva__perform-editing-operations",
+      "mcp__claude_ai_Canva__commit-editing-transaction",
+      "mcp__claude_ai_Klaviyo__klaviyo_get_flows",
+      "mcp__claude_ai_Klaviyo__klaviyo_get_flow",
+      "WebFetch(domain:www.getnooni.com)",
+      "mcp__claude_ai_Klaviyo__klaviyo_create_email_template",
+      "mcp__claude_ai_Klaviyo__klaviyo_update_email_template",
+      "mcp__claude_ai_Klaviyo__klaviyo_get_lists",
+      "mcp__claude_ai_Klaviyo__klaviyo_create_campaign",
+      "mcp__claude_ai_Klaviyo__klaviyo_assign_template_to_campaign_message"
+    ]
+  }
+}
