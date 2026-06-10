@@ -4,6 +4,8 @@ on:
   schedule:
     # Ma/wo/vr 09:00 Amsterdam tijd (UTC+2 zomer = 07:00 UTC)
     - cron: '0 7 * * 1,3,5'
+    # 20e van elke maand 08:00 UTC — plan volgende maand genereren
+    - cron: '0 8 20 * *'
   workflow_dispatch:
     inputs:
       topic:
@@ -18,6 +20,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout
@@ -44,6 +48,19 @@ jobs:
           ANTHROPIC_API_KEY:    ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY:       ${{ secrets.OPENAI_API_KEY }}
           SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
+
+      - name: Plan volgende maand genereren (20e van de maand)
+        run: |
+          DAY=$(date +%d | sed 's/^0//')
+          if [ "$DAY" = "20" ]; then
+            echo "20e van de maand — plan genereren..."
+            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+            node scripts/generate-plan.mjs
+          else
+            echo "Niet de 20e — plan-generatie overgeslagen."
+          fi
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: Klaviyo digest versturen (vrijdag automatisch + handmatig)
         run: |
