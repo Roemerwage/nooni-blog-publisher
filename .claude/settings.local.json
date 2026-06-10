@@ -24,7 +24,10 @@
       "mcp__claude_ai_Klaviyo__klaviyo_update_email_template",
       "mcp__claude_ai_Klaviyo__klaviyo_get_lists",
       "mcp__claude_ai_Klaviyo__klaviyo_create_campaign",
-      "mcp__claude_ai_Klaviyo__klaviyo_assign_template_to_campaign_message"
+      "mcp__claude_ai_Klaviyo__klaviyo_assign_template_to_campaign_message",
+      "mcp__claude_ai_Klaviyo__klaviyo_render_email_template",
+      "mcp__claude_ai_Klaviyo__klaviyo_list_email_templates",
+      "mcp__claude_ai_Klaviyo__klaviyo_get_email_template"
     ]
   }
 }
