@@ -246,7 +246,7 @@ async function publishBlog(blog, imageB64, scheduleDate = null) {
       { namespace: 'global', key: 'title_tag',       value: blog.metaTitle,       type: 'single_line_text_field' },
       { namespace: 'global', key: 'description_tag', value: blog.metaDescription, type: 'single_line_text_field' },
     ],
-    published:    false,
+    published:    true,
     published_at: scheduleDate ? `${scheduleDate}T09:00:00+02:00` : new Date().toISOString(),
   };
 
