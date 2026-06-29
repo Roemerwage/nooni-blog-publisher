@@ -262,7 +262,14 @@ async function publishBlog(blog, imageB64, scheduleDate = null) {
   });
 
   const data = await res.json();
-  if (!data.article?.id) throw new Error(data.error || JSON.stringify(data));
+  if (!data.article?.id) {
+    const err = JSON.stringify(data);
+    if (err.includes('has already been taken')) {
+      console.log(`Al gepubliceerd (handle bestaat al): ${article.handle} — overgeslagen.`);
+      return null;
+    }
+    throw new Error(data.error || err);
+  }
   return { url: `https://getnooni.com/blogs/news/${data.article.handle}`, articleId: data.article.id, fullHtml };
 }
 
@@ -414,8 +421,10 @@ for (const { topic, date } of TOPICS) {
     }
 
     console.log(`  Publiceren naar Shopify...`);
-    const { url, articleId, fullHtml } = await publishBlog(blog, imageB64, date);
-    console.log(`  ✓ Gepubliceerd (concept): ${url}`);
+    const result = await publishBlog(blog, imageB64, date);
+    if (!result) continue;
+    const { url, articleId, fullHtml } = result;
+    console.log(`  ✓ Gepubliceerd: ${url}`);
 
     try {
       await setProductMetafield(articleId, detectProduct(blog.title));
