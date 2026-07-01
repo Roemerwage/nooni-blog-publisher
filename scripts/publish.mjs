@@ -405,9 +405,26 @@ async function registerEnglishTranslations(articleId, en) {
 
 console.log(`\nPubliceren van ${TOPICS.length} blog(s)...\n`);
 
+async function articleExistsForDate(date) {
+  if (!date) return false;
+  const token = process.env.SHOPIFY_ACCESS_TOKEN;
+  const min = `${date}T00:00:00+02:00`;
+  const max = `${date}T23:59:59+02:00`;
+  const res = await fetch(
+    `https://${SHOPIFY_SHOP}/admin/api/2024-10/blogs/${BLOG_ID}/articles.json?published_at_min=${encodeURIComponent(min)}&published_at_max=${encodeURIComponent(max)}&fields=id`,
+    { headers: { 'X-Shopify-Access-Token': token } }
+  );
+  const data = await res.json();
+  return (data.articles || []).length > 0;
+}
+
 for (const { topic, date } of TOPICS) {
   console.log(`▶ Genereren: "${topic}"${date ? ` (gepland: ${date})` : ''}`);
   try {
+    if (date && await articleExistsForDate(date)) {
+      console.log(`  Al gepubliceerd op ${date} — overgeslagen.\n`);
+      continue;
+    }
     const blog = await generateBlog(topic);
     console.log(`  Titel: ${blog.title}`);
 
